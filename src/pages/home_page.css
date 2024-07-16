@@ -1,0 +1,54 @@
+/* homepage.css */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .homePage {
+    display: flex; /* Use flexbox layout */
+    justify-content: flex-start; /* Align items to the start (left) */
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px; /* Add some padding around the content */
+  }
+  .card{
+    width: 300px; /* Set a width for your card */
+    margin: 20px; /* Add some margin if needed */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  .bio{
+    width: 80%; /* Set a width for your card */
+    margin: 20px; /* Add some margin if needed */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 2px 16px
+  }
+  .container,additionalContainer{
+    padding: 2px 16px;
+  }
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  
+  

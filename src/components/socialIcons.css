@@ -1,0 +1,14 @@
+.social-icons {
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+}
+
+.social-icons a {
+    color: #000;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #0073b1; /* Change this color to match your design */
+}
