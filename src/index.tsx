@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HomePage from './pages/home-page';
-import Navbar from './components/navbar';
+import { HashRouter, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );root.render(
   <React.StrictMode>
-    <Navbar></Navbar>
-     <App></App>
+    <HashRouter>
     <HomePage></HomePage>
+      <Routes>
+      </Routes>
+    </HashRouter>
   </React.StrictMode>
 );
 

@@ -1,7 +1,7 @@
 // src/components/Navbar.tsx
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import './navbar.css'; 
+import './navbar.css';
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="navbar-logo">
-                    <h1>Welcome</h1>
+                    <h1>:D</h1>
                 </div>
                 <div className="menu-icon" onClick={toggleNavbar}>
                     {isOpen ? <FaTimes /> : <FaBars />}
@@ -22,22 +22,17 @@ const Navbar: React.FC = () => {
                 <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
                     <li className="nav-item">
                         <a href="#home" className="nav-links">
-                            Home
+                            {/*Home*/}
                         </a>
                     </li>
                     <li className="nav-item">
                         <a href="#services" className="nav-links">
-                            Services
+                            {/*Services*/}
                         </a>
                     </li>
                     <li className="nav-item">
                         <a href="#about" className="nav-links">
-                            About
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="#contact" className="nav-links">
-                            Contact
+                            {/*About*/}
                         </a>
                     </li>
                 </ul>
