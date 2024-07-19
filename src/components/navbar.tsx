@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="navbar-logo">
-                    <h1>:D</h1>
+                    <h1>:E</h1>
                 </div>
                 <div className="menu-icon" onClick={toggleNavbar}>
                     {isOpen ? <FaTimes /> : <FaBars />}
