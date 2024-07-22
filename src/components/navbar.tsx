@@ -1,6 +1,6 @@
 // src/components/Navbar.tsx
 import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaKiwiBird, FaTimes } from 'react-icons/fa';
 import './navbar.css';
 
 const Navbar: React.FC = () => {
@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="navbar-logo">
-                    <h1>:E</h1>
+                    <FaKiwiBird></FaKiwiBird>
                 </div>
                 <div className="menu-icon" onClick={toggleNavbar}>
                     {isOpen ? <FaTimes /> : <FaBars />}
@@ -22,17 +22,17 @@ const Navbar: React.FC = () => {
                 <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
                     <li className="nav-item">
                         <a href="#home" className="nav-links">
-                            {/*Home*/}
+                            Home
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="#services" className="nav-links">
-                            {/*Services*/}
+                        <a href="#experience" className="nav-links">
+                            Experience
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="#about" className="nav-links">
-                            {/*About*/}
+                        <a href="#prpjects" className="nav-links">
+                            Projects
                         </a>
                     </li>
                 </ul>

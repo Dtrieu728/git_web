@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,6 +19,9 @@ function App() {
           Learn React
         </a>
       </header>
+      {/*<h1 className="fade-in">Hello, World!</h1>
+      <button onClick={() => setAnimate(!animate)}>Toggle Animation</button>
+      <div className={animate ? 'box animate' : 'box'} />*/}
     </div>
   );
 }

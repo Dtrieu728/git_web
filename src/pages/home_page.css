@@ -5,22 +5,22 @@ body {
     box-sizing: border-box;
   }
   .homePage {
-    display: flex; /* Use flexbox layout */
-    justify-content: flex-start; /* Align items to the start (left) */
-    align-items: flex-start; /* Align items to the top */
-    padding: 20px; /* Add some padding around the content */
+    display: flex; 
+    justify-content: flex-start;
+    align-items: flex-start; 
+    padding: 20px; 
   }
   .card{
-    width: 300px; /* Set a width for your card */
-    margin: 20px; /* Add some margin if needed */
+    width: 300px; 
+    margin: 20px; 
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
   .bio{
-    width: 80%; /* Set a width for your card */
-    margin: 20px; /* Add some margin if needed */
+    width: 80%; 
+    margin: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -50,7 +50,60 @@ body {
   button:hover, a:hover {
     opacity: 0.7;
   }
-
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .skill {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .skill:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skill svg {
+    flex-shrink: 0;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin-top: 20px;
+    transition: transform 1s;
+  }
+  
+  .animate {
+    transform: rotate(180deg);
+  }
+  
 
   
   
