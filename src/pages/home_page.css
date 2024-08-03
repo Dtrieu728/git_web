@@ -1,109 +1,112 @@
-/* homepage.css */
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .homePage {
-    display: flex; 
-    justify-content: flex-start;
-    align-items: flex-start; 
-    padding: 20px; 
-  }
-  .card{
-    width: 300px; 
-    margin: 20px; 
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  .bio{
-    width: 80%; 
-    margin: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    padding: 2px 16px
-  }
-  .container,additionalContainer{
-    padding: 2px 16px;
-  }
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-  }
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: black;
-    background-color: white;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-  button:hover, a:hover {
-    opacity: 0.7;
-  }
-  .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-  }
-  
-  .skill {
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #ffffff;
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-size: 16px;
-    font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .skill:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .skill svg {
-    flex-shrink: 0;
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .fade-in {
-    animation: fadeIn 2s ease-in-out;
-  }
-  
-  .box {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    margin-top: 20px;
-    transition: transform 1s;
-  }
-  
-  .animate {
-    transform: rotate(180deg);
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
-  
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: white;
+  min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+}
+
+.card{
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: white;
+  width: 99%;
+}
+.additionalContainer{
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: white;
+  width: 99%;
+}
+.container{
+  margin: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.bio {
+  padding: 2px 16px;
+  font-size: 22px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill svg {
+  flex-shrink: 0;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: black;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

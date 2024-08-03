@@ -10,30 +10,46 @@ const Navbar: React.FC = () => {
         setIsOpen(!isOpen);
     };
 
+    const handleScroll = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            window.scrollTo({
+                top: element.offsetTop - 60,
+                behavior: 'smooth'
+            });
+        }
+        setIsOpen(false); 
+    };
+
     return (
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="navbar-logo">
-                    <FaKiwiBird></FaKiwiBird>
+                    <FaKiwiBird size={50} />
                 </div>
                 <div className="menu-icon" onClick={toggleNavbar}>
                     {isOpen ? <FaTimes /> : <FaBars />}
                 </div>
                 <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
                     <li className="nav-item">
-                        <a href="#home" className="nav-links">
+                        <span onClick={() => handleScroll('Home')} className="nav-links">
                             Home
-                        </a>
+                        </span>
                     </li>
                     <li className="nav-item">
-                        <a href="#experience" className="nav-links">
+                        <span onClick={() => handleScroll('Experience')} className="nav-links">
                             Experience
-                        </a>
+                        </span>
                     </li>
                     <li className="nav-item">
-                        <a href="#prpjects" className="nav-links">
+                        <span onClick={() => handleScroll('Projects')} className="nav-links">
                             Projects
-                        </a>
+                        </span>
+                    </li>
+                    <li className="nav-item">
+                        <span onClick={() => handleScroll('About')} className="nav-links">
+                            About
+                        </span>
                     </li>
                 </ul>
             </div>
