@@ -6,13 +6,15 @@ import Experience from '../components/experience';
 import { FaJs, FaReact, FaPython, FaJava } from 'react-icons/fa';
 import { SiTypescript} from 'react-icons/si';
 import { SiCplusplus, SiC } from 'react-icons/si'; 
+import Hero from '../components/Hero';
+import ProjectsSection from '../components/projectSection';
+
 const headShot = require('../images/Funnydusty.jpg');
 
 
 
 function HomePage() {
   const [showExperience, setShowExperience] = useState(false);
-  const [showProjects, setShowProjects] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,13 +41,13 @@ function HomePage() {
   return (
     <>
       <Navbar />
+      <Hero></Hero>
       <div  id ="Home" className="homePage" style={{ backgroundColor: 'white' }}>
         <div className="card" style={{ backgroundColor: 'white', width: '40%' }}>
           <img src={headShot} alt="Avatar" style={{ width: '100%' }} />
           <div className="container">
             <h3><b>Dustine Trieu</b></h3>
-            <p>B.S Computer Science</p>
-            <p>B.A Asian Studies</p>
+            <p>B.S Computer Science | B.A Asian Studies</p>
             <SocialIcons />
           </div>
         </div>
@@ -53,9 +55,9 @@ function HomePage() {
           <div>
             <div id= "About" className="bio fade-in" style={{ fontSize: '35px' }}>
               <h3 style={{ textAlign: 'center' }}><b>About Me</b></h3>
-              <p>Hello! I'm Dustine Trieu, a junior at the University of Delaware, where I am pursuing a Bachelor of Science in Computer Science with a concentration in Artificial Intelligence and Robotics, alongside a Bachelor of Arts in Asian Studies. My academic journey is fueled by a deep passion for exploring the cutting-edge realms of AI and robotics, and I am eager to contribute to advancements in these fields.</p>
-              <p>In addition to my majors, I am also minoring in Mathematics. This combination of studies allows me to blend technical expertise with a broader cultural and analytical perspective.</p>
-              <p>Through my coursework and projects, I strive to develop innovative solutions that can make a significant impact on both technology and society. I am excited about the opportunities ahead and look forward to connecting with others who share my enthusiasm for AI, robotics, and interdisciplinary learning.</p>
+              <p style={{fontSize:"30px"}}>Hello! I'm Dustine Trieu, a junior at the University of Delaware, where I am pursuing a Bachelor of Science in Computer Science with a concentration in Artificial Intelligence and Robotics, alongside a Bachelor of Arts in Asian Studies. My academic journey is fueled by a deep passion for exploring the cutting-edge realms of AI and robotics, and I am eager to contribute to advancements in these fields.</p>
+              <p style={{fontSize:"30px"}}>In addition to my majors, I am also minoring in Mathematics. This combination of studies allows me to blend technical expertise with a broader cultural and analytical perspective.</p>
+              <p style={{fontSize:"30px"}}>Through my coursework and projects, I strive to develop innovative solutions that can make a significant impact on both technology and society. I am excited about the opportunities ahead and look forward to connecting with others who share my enthusiasm for AI, robotics, and interdisciplinary learning.</p>
             </div>
           </div>
 
@@ -96,12 +98,11 @@ function HomePage() {
             </div>
           </div>
           
-          <div id="Experience" className="additionalContainer fade-in">
+          <div id="Experience" className="additionalContainer fade-in" style={{marginTop:"200px"}}>
             <div className="bio" style={{ fontSize: '25px' }}>
               <button onClick={() => setShowExperience(!showExperience)}>
                 <h3 style={{fontSize:"35px"}}><b>Experience</b></h3>
               </button>
-              {(
                 <>
                   <Experience
                     title="Intro to Computer Science 1 Teaching Assistant"
@@ -134,23 +135,10 @@ function HomePage() {
                     ]}
                   />
                 </>
-              )}
             </div>
           </div>
-
-          <div id="Projects" className="additionalContainer fade-in" style={{marginTop:"200px"}}>
-            <div className="bio" style={{ fontSize: '22px'}}>
-              <button onClick={() => setShowProjects(!showProjects)}>
-                <h2 style={{ textAlign: 'center' }}><b>Projects</b></h2>
-              </button>
-              {(
-                <ul style={{fontSize:"25px"}}>
-                  <li>Career Quiz using OpenAI</li>
-                  <li>Gender Inclusive Language project from Hackathon</li>
-                  <li>Spotify Dashboard</li>
-                </ul>
-              )}
-            </div>
+          <div id="Projects" className="fade-in" style={{marginTop:"200px"}}>
+                <ProjectsSection></ProjectsSection>
           </div>
         </div>
       </div>

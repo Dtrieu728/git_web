@@ -11,7 +11,7 @@ body {
   justify-content: center;
   padding: 20px;
   background-color: white;
-  min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+  min-height: 100vh; 
 }
 
 .card{
@@ -37,10 +37,21 @@ body {
   font-size: 25px;
 }
 
+.borderContainer{
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: white;
+  width: 99%;
+}
+
 .bio {
   padding: 2px 16px;
   font-size: 22px;
 }
+
 
 .skills-container {
   display: flex;
@@ -110,3 +121,12 @@ a {
 html {
   scroll-behavior: smooth;
 }
+.image-container {
+  display: grid;
+  place-items: center; 
+}
+
+.image-container img {
+  width: 60%; 
+}
+
