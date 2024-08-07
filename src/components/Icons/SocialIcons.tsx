@@ -1,5 +1,5 @@
 import React from 'react';
-import "../components/socialIcons.css"
+import "../Icons/socialIcons.css"
 import { FaLinkedin } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa6';
 

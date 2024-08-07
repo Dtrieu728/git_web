@@ -1,5 +1,5 @@
 import React from 'react';
-import '../components/experience.css'; // Import CSS file for styling
+import "../Experience/experience.css";
 
 interface ExperienceProps {
   title: string;

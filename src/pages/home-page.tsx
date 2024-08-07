@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import '../pages/home_page.css';
-import SocialIcons from '../components/SocialIcons';
-import Navbar from '../components/navbar';
-import Experience from '../components/experience';
+import SocialIcons from '../components/Icons/SocialIcons';
+import Navbar from '../components/Navbar/navbar';
+import Experience from '../components/Experience/experience';
 import { FaJs, FaReact, FaPython, FaJava } from 'react-icons/fa';
 import { SiTypescript} from 'react-icons/si';
 import { SiCplusplus, SiC } from 'react-icons/si'; 
-import Hero from '../components/Hero';
-import ProjectsSection from '../components/projectSection';
+import Hero from '../components/Hero/Hero';
+import ProjectsSection from '../components/Project/projectSection';
 
 const headShot = require('../images/Funnydusty.jpg');
 
