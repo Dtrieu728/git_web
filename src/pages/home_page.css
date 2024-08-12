@@ -11,10 +11,10 @@ body {
   justify-content: center;
   padding: 20px;
   background-color: white;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
-.card{
+.card {
   margin: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -23,7 +23,7 @@ body {
   background-color: white;
   width: 99%;
 }
-.additionalContainer{
+.additionalContainer {
   margin-top: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -31,13 +31,13 @@ body {
   background-color: white;
   width: 99%;
 }
-.container{
+.container {
   margin: 20px;
   text-align: center;
   font-size: 25px;
 }
 
-.borderContainer{
+.borderContainer {
   margin: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -51,7 +51,6 @@ body {
   padding: 2px 16px;
   font-size: 22px;
 }
-
 
 .skills-container {
   display: flex;
@@ -123,10 +122,9 @@ html {
 }
 .image-container {
   display: grid;
-  place-items: center; 
+  place-items: center;
 }
 
 .image-container img {
-  width: 60%; 
+  width: 60%;
 }
-

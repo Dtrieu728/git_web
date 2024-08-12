@@ -5,10 +5,10 @@
 }
 
 .project-card {
-  border: 1px solid #ddd; 
-  border-radius: 8px; 
-  padding: 20px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -18,23 +18,23 @@
 }
 
 .project-title {
-  font-size: 30px; 
-  text-align: center;  
+  font-size: 30px;
+  text-align: center;
 }
 
 .project-description {
-  font-size: 18px; 
-  text-align: center;  
+  font-size: 18px;
+  text-align: center;
 }
 
 .project-image {
   width: 100%;
-  max-height: 300px; 
-  object-fit: cover; 
+  max-height: 300px;
+  object-fit: cover;
 }
 
 .section-title {
   font-size: 36px;
   text-align: center;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
 }
