@@ -4,7 +4,7 @@ import SocialIcons from "../components/Icons/SocialIcons";
 import Navbar from "../components/Navbar/navbar";
 import Experience from "../components/Experience/experience";
 import { FaJs, FaReact, FaPython, FaJava } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
+import { SiMysql, SiTypescript } from "react-icons/si";
 import { SiCplusplus, SiC } from "react-icons/si";
 import Hero from "../components/Hero/Hero";
 import ProjectsSection from "../components/Project/projectSection";
@@ -74,9 +74,11 @@ function HomePage() {
                 contribute to advancements in these fields.
               </p>
               <p style={{ fontSize: "30px" }}>
-                In addition to my majors, I am also minoring in Mathematics.
-                This combination of studies allows me to blend technical
-                expertise with a broader cultural and analytical perspective.
+                I have a passion for machine learning, artificial intelligence, and natural language processing.
+                Throughout my studies, I have focused on machine learning, artificial intelligence, and NLP, with a particular interest 
+                in how these technologies can enhance human-computer interaction and solve complex real-world problems. I've had the opportunity 
+                to apply these concepts through various projects, such as developing an AI-powered career path quiz application and creating an advanced
+                 Spotify dashboard that integrates real-time user data and leverages personalization algorithms. 
               </p>
               <p style={{ fontSize: "30px" }}>
                 Through my coursework and projects, I strive to develop
@@ -126,6 +128,10 @@ function HomePage() {
                   <SiC size={35} color="#00599C" />
                   <span>C</span>
                 </div>
+                <div className="skill">
+                  <SiMysql size={35} color="#00599C" />
+                  <span>SQl</span>
+                </div>
                 {/* Add more skills with icons as needed */}
               </div>
             </div>
@@ -171,6 +177,15 @@ function HomePage() {
                     "Promoted computing-related events and activities within the university community.",
                     "Engaged with students to increase awareness and participation in computing initiatives.",
                     "Assisted in organizing workshops, hackathons, and guest lectures.",
+                  ]}
+                />
+                  <Experience
+                  title="College of Engineer Ambassador"
+                  organization="University of Delaware"
+                  date="October 2024 - present"
+                  responsibilities={[
+                    "Represent the Computer Science department at admissions events, engaging prospective students and their families through tours and presentations.",
+                    "Collaborate with faculty and staff to organize and promote departmental tours and events, strengthening recruitment efforts."
                   ]}
                 />
               </>
