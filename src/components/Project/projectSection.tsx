@@ -49,6 +49,17 @@ const ProjectsSection = () => {
         </div>
         <div className="project-card">
           <h3 className="project-title">
+            Sentiment Analysis RNN
+          </h3>
+          <p className="project-description">
+              Developed a sentiment analysis model using a Recurrent Neural Network (RNN) with LSTM units to classify user-generated hotel reviews as positive or negative. 
+              Preprocessed over 500,000 reviews by normalizing text, removing noise, and eliminating stopwords.
+              Trained and evaluated the model on a labeled dataset to achieve robust accuracy in detecting sentiment trends.
+              This project showcases skills in deep learning, natural language processing (NLP), and end-to-end machine learning workflows.
+          </p>
+        </div>
+        <div className="project-card">
+          <h3 className="project-title">
             Gender Inclusive Language Initiative
           </h3>
           <p className="project-description">
@@ -89,6 +100,7 @@ const ProjectsSection = () => {
             />
           </div>
         </div>
+        
       </div>
     </div>
   );
