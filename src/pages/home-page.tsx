@@ -189,7 +189,7 @@ function HomePage() {
                 />
                 <Experience
                   title="Intro to Computer Science 1 Teaching Assistant"
-                  organization="University of Delaware"
+                  organization="University of Delaware, Dept. Computer and Information Science"
                   date="August 2023 - December 2023"
                   responsibilities={[
                     "Assisted in teaching and grading coursework for the introductory computer science class.",
@@ -218,21 +218,12 @@ function HomePage() {
                   ]}
                 />
                 <Experience
-                  title="University ofe Delaware College of Engineering Ambassador"
+                  title="University of Delaware College of Engineering Ambassador"
                   organization="University of Delaware, College of Engineering"
                   date="August 2024 - present"
                   responsibilities={[
                     "Supported the College of Engineering in planning and hosting engagement events for prospective students.",
                     "Provide tours to prospective students and their families around campus",
-                  ]}
-                />
-                  <Experience
-                  title="College of Engineer Ambassador"
-                  organization="University of Delaware"
-                  date="October 2024 - present"
-                  responsibilities={[
-                    "Represent the Computer Science department at admissions events, engaging prospective students and their families through tours and presentations.",
-                    "Collaborate with faculty and staff to organize and promote departmental tours and events, strengthening recruitment efforts."
                   ]}
                 />
               </>
