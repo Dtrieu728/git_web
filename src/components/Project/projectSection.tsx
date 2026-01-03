@@ -3,6 +3,7 @@ import VideoSection from "../Video/videoSection";
 const careerQuiz = require("../../images/careerquiz1.png");
 const Spotify1 = require("../../images/SpotifyPro1.png");
 const Spotify2 = require("../../images/Spotifypro2.png");
+const MriRecon = require("../../images/MRIREcon.png");
 
 const ProjectsSection = () => {
   return (
@@ -18,6 +19,31 @@ const ProjectsSection = () => {
         <b> Projects</b>
       </h3>
       <div className="project-container">
+         <div className="project-card">
+          <h3 className="project-title">
+            Converted and Improve MATLAB Non-Carteisan MRI Reconstruction Pipeline
+          </h3>
+          <p className="project-description">
+            Converted a non-Cartesian MRI image reconstruction pipeline from MATLAB to Python, enabling more flexible experimentation and GPU acceleration. The system 
+            reconstructs medical images from irregularly sampled frequency-domain data using
+            NUFFT-based methods, significantly improving runtime performance while preserving
+            image quality.
+          </p>
+          <div className="image-container">
+            <img src={MriRecon} alt="career" className="project-image" />
+          </div>
+          <div className="video-container">
+            <h2>Career Quiz Link</h2>
+            <a
+              href="https://github.com/EdmarPelayo/CISC498-Johnson-Project"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="video-link"
+            >
+              Github Link
+            </a>
+          </div>
+        </div>
         <div className="project-card">
           <h3 className="project-title">
             Developed an Interactive Career Quiz
@@ -43,7 +69,7 @@ const ProjectsSection = () => {
               rel="noopener noreferrer"
               className="video-link"
             >
-              Project Demostration
+               Project Demonstration
             </a>
           </div>
         </div>

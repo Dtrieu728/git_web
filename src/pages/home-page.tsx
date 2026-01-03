@@ -15,6 +15,34 @@ function HomePage() {
   const [showExperience, setShowExperience] = useState(false);
 
   useEffect(() => {
+    const KEY = "home_intro_played";
+    if (typeof window === "undefined") return;
+
+   
+    const prefersReduced = window.matchMedia
+      ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      : false;
+    if (prefersReduced) {
+      sessionStorage.setItem(KEY, "true");
+      document.querySelectorAll(".fade-in").forEach((el) =>
+        el.classList.remove("fade-in")
+      );
+      return;
+    }
+
+    const hasPlayed = sessionStorage.getItem(KEY) === "true";
+    if (hasPlayed) {
+     
+      document.querySelectorAll(".fade-in").forEach((el) =>
+        el.classList.remove("fade-in")
+      );
+    } else {
+
+      sessionStorage.setItem(KEY, "true");
+    }
+  }, []);
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -65,7 +93,7 @@ function HomePage() {
                 <b>About Me</b>
               </h3>
               <p style={{ fontSize: "30px" }}>
-                Hello! I'm Dustine Trieu, a junior at the University of
+                Hello! I'm Dustine Trieu, a senior at the University of
                 Delaware, where I am pursuing a Bachelor of Science in Computer
                 Science with a concentration in Artificial Intelligence and
                 Robotics, alongside a Bachelor of Arts in Asian Studies. My
@@ -144,6 +172,16 @@ function HomePage() {
               </button>
               <>
                 <Experience
+                  title="Undergraduate Researcher"
+                  organization="University of Delaware, THRAL lab"
+                  date="August 2024 - present"
+                  responsibilities={[
+                    "Conduct research on early warning systems for CS1 courses using behavioral and performance data to identify students at risk of poor outcomes.",
+                    "Collaborate with a research team to apply machine learning techniques that improve prediction of student performance and inform instructional interventions",
+                    "Implement generalized linear mixed models (GLMMs) to analyze predictive features such as assignment start time, syntax errors, and testing accuracy across time intervals",
+                  ]}
+                />
+                <Experience
                   title="Intro to Computer Science 1 Teaching Assistant"
                   organization="University of Delaware"
                   date="August 2023 - December 2023"
@@ -155,7 +193,7 @@ function HomePage() {
                 />
                 <Experience
                   title="Intro to System Programming Teaching Assistant"
-                  organization="University of Delaware"
+                  organization="University of Delaware, Dept. Computer and Information Science"
                   date="December 2023 - June 2024"
                   responsibilities={[
                     "Supported the teaching and evaluation of students in system programming.",
@@ -165,12 +203,21 @@ function HomePage() {
                 />
                 <Experience
                   title="Computing Promotion Undergraduate Squad"
-                  organization="University of Delaware"
+                  organization="University of Delaware, Dept. Computer and Information Science"
                   date="October 2023 - present"
                   responsibilities={[
                     "Promoted computing-related events and activities within the university community.",
                     "Engaged with students to increase awareness and participation in computing initiatives.",
                     "Assisted in organizing workshops, hackathons, and guest lectures.",
+                  ]}
+                />
+                <Experience
+                  title="University ofe Delaware College of Engineering Ambassador"
+                  organization="University of Delaware, College of Engineering"
+                  date="August 2024 - present"
+                  responsibilities={[
+                    "Supported the College of Engineering in planning and hosting engagement events for prospective students.",
+                    "Provide tours to prospective students and their families around campus",
                   ]}
                 />
               </>
