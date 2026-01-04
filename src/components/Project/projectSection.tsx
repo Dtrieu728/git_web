@@ -33,7 +33,7 @@ const ProjectsSection = () => {
             <img src={MriRecon} alt="career" className="project-image" />
           </div>
           <div className="video-container">
-            <h2>Career Quiz Link</h2>
+            
             <a
               href="https://github.com/EdmarPelayo/CISC498-Johnson-Project"
               target="_blank"
@@ -62,7 +62,6 @@ const ProjectsSection = () => {
             <img src={careerQuiz} alt="career" className="project-image" />
           </div>
           <div className="video-container">
-            <h2>Career Quiz Link</h2>
             <a
               href="https://vikiniki123.github.io/starter_helpi/"
               target="_blank"
@@ -83,6 +82,16 @@ const ProjectsSection = () => {
               Trained and evaluated the model on a labeled dataset to achieve robust accuracy in detecting sentiment trends.
               This project showcases skills in deep learning, natural language processing (NLP), and end-to-end machine learning workflows.
           </p>
+           <div className="video-container">
+            <a
+              href="https://github.com/Dtrieu728/Sentiment_Analysis_Proj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="video-link"
+            >
+               Github Link 
+            </a>
+          </div>
         </div>
         <div className="project-card">
           <h3 className="project-title">
@@ -99,6 +108,7 @@ const ProjectsSection = () => {
           </p>
           <VideoSection />
         </div>
+
         <div className="project-card">
           <h3 className="project-title">Spotify Dashboard</h3>
           <p className="project-description">
@@ -117,7 +127,9 @@ const ProjectsSection = () => {
               alt="Spotify Project profile"
               className="project-image"
             />
+
           </div>
+
           <div className="image-container">
             <img
               src={Spotify2}
@@ -125,8 +137,18 @@ const ProjectsSection = () => {
               className="project-image"
             />
           </div>
+
+                     <div className="video-container">
+            <a
+              href="https://github.com/Dtrieu728/spotify-pro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="video-link"
+            >
+               Github Link 
+            </a>
+          </div>
         </div>
-        
       </div>
     </div>
   );
