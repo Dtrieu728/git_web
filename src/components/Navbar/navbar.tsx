@@ -1,10 +1,12 @@
 // src/components/Navbar.tsx
 import React, { useState } from "react";
-import { FaBars, FaKiwiBird, FaTimes } from "react-icons/fa";
+import { FaBars, FaKiwiBird, FaTimes, FaMoon, FaSun } from "react-icons/fa";
+import { useDarkMode } from "../../context/DarkModeContext";
 import "./navbar.css";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -56,6 +58,16 @@ const Navbar: React.FC = () => {
             <span onClick={() => handleScroll("About")} className="nav-links">
               About
             </span>
+          </li>
+          <li className="nav-item">
+            <button
+              className="dark-mode-toggle"
+              onClick={toggleDarkMode}
+              title={isDarkMode ? "Light Mode" : "Dark Mode"}
+              aria-label="Toggle dark mode"
+            >
+              {isDarkMode ? <FaSun size={24} /> : <FaMoon size={24} />}
+            </button>
           </li>
         </ul>
       </div>

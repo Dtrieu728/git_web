@@ -1,28 +1,15 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import HomePage from './pages/home-page';
+import { DarkModeProvider } from './context/DarkModeContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      {/*<h1 className="fade-in">Hello, World!</h1>
-      <button onClick={() => setAnimate(!animate)}>Toggle Animation</button>
-      <div className={animate ? 'box animate' : 'box'} />*/}
-    </div>
+    <DarkModeProvider>
+      <div className="App">
+        <HomePage />
+      </div>
+    </DarkModeProvider>
   );
 }
 

@@ -1,97 +1,162 @@
+/* Variables - Light Mode (Default) */
+:root {
+  --card-bg: #ffffff;
+  --card-border: #ccc;
+  --text-primary: #333;
+  --text-secondary: #555;
+  --text-tertiary: #777;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9f9f9;
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --border-radius: 10px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 20px;
+  --font-size-section: 30px;
+  --font-size-title: 25px;
+}
+
+/* Dark Mode */
+:root.dark-mode {
+  --card-bg: #2a2a2a;
+  --card-border: #444;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --text-tertiary: #888;
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #333;
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Base Styles */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Page Layout */
 .homePage {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  background-color: white;
+  padding: var(--spacing-lg);
+  background-color: var(--bg-primary);
   min-height: 100vh;
+  transition: background-color 0.3s ease;
 }
 
-.card {
-  margin: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Cards & Containers */
+.card,
+.additionalContainer,
+.borderContainer {
+  margin: var(--spacing-lg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
   overflow: hidden;
-  background-color: white;
+  background-color: var(--card-bg);
   width: 99%;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.additionalContainer {
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  background-color: white;
-  width: 99%;
+
+.profile-card {
+  width: 40%;
 }
+
+/* Profile Section */
+.profile-image {
+  width: 100%;
+}
+
 .container {
-  margin: 20px;
+  margin: var(--spacing-lg);
   text-align: center;
   font-size: 25px;
 }
 
-.borderContainer {
-  margin: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  background-color: white;
-  width: 99%;
-}
-
+/* Section Styles */
 .bio {
-  padding: 2px 16px;
-  font-size: 22px;
+  padding: var(--spacing-md) 16px;
+  font-size: var(--font-size-title);
+  color: var(--text-primary);
+  transition: color 0.3s ease;
 }
 
+.section-title {
+  text-align: center;
+  font-size: var(--font-size-section);
+  margin: var(--spacing-lg) 0;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.skills-section,
+.about-section,
+.experience-section,
+.projects-section {
+  width: 100%;
+  margin-top: var(--spacing-lg);
+}
+
+.about-section,
+.experience-section,
+.projects-section {
+  margin-top: 200px;
+}
+
+/* Skills Container */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin: 20px;
+  margin: var(--spacing-lg);
 }
 
 .skill {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #ffffff;
-  padding: 8px 12px;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 20px;
   font-size: 16px;
   font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  box-shadow: var(--shadow-light);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .skill:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-hover);
 }
 
 .skill svg {
   flex-shrink: 0;
 }
 
+/* Button Styles */
 button {
   border: none;
   outline: 0;
   display: inline-block;
-  padding: 8px;
-  color: black;
-  background-color: white;
+  padding: var(--spacing-sm);
+  color: var(--text-primary);
+  background-color: var(--card-bg);
   text-align: center;
   cursor: pointer;
   width: 100%;
   font-size: 18px;
+  transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
@@ -102,19 +167,6 @@ a {
   text-decoration: none;
   font-size: 22px;
   color: black;
-}
-
-.fade-in {
-  animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 html {
