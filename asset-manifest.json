@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/git_web/static/css/main.a2fa3776.css",
-    "main.js": "/git_web/static/js/main.453d6136.js",
+    "main.css": "/git_web/static/css/main.d8599f87.css",
+    "main.js": "/git_web/static/js/main.3e2f7fab.js",
     "static/js/453.169044e2.chunk.js": "/git_web/static/js/453.169044e2.chunk.js",
     "static/media/MRIREcon.png": "/git_web/static/media/MRIREcon.f8844eff738dd73513ef.png",
     "static/media/SpotifyPro1.png": "/git_web/static/media/SpotifyPro1.138f8b6421eab8f39269.png",
     "static/media/careerquiz1.png": "/git_web/static/media/careerquiz1.58f290435bb46ed57e94.png",
     "static/media/Funnydusty.jpg": "/git_web/static/media/Funnydusty.bb81920e3dacca122f27.jpg",
-    "static/media/Spotifypro2.png": "/git_web/static/media/Spotifypro2.7c80196ced49c335fed9.png",
+    "static/media/backtestingAAPL.png": "/git_web/static/media/backtestingAAPL.33740f2aca5920e1ac24.png",
     "index.html": "/git_web/index.html",
-    "main.a2fa3776.css.map": "/git_web/static/css/main.a2fa3776.css.map",
-    "main.453d6136.js.map": "/git_web/static/js/main.453d6136.js.map",
+    "main.d8599f87.css.map": "/git_web/static/css/main.d8599f87.css.map",
+    "main.3e2f7fab.js.map": "/git_web/static/js/main.3e2f7fab.js.map",
     "453.169044e2.chunk.js.map": "/git_web/static/js/453.169044e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2fa3776.css",
-    "static/js/main.453d6136.js"
+    "static/css/main.d8599f87.css",
+    "static/js/main.3e2f7fab.js"
   ]
 }
