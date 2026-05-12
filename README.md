@@ -11,8 +11,6 @@ I’m a Computer Science and Asian Studies student at the University of Delaware
 ---
 
 ## Live Demo
-
-Add your deployed link here:
 [Link to Portfolio](https://dtrieu728.github.io/git_web/)
 
 
@@ -22,9 +20,8 @@ Add your deployed link here:
 
 - Frontend: React, TypeScript, JavaScript, HTML5, CSS3  
 - Styling: CSS Modules / Custom CSS  
-- Animations: Framer Motion (if used)  
 - Build Tool: Create React App (CRA)  
-- Deployment: GitHub Pages / Vercel / Netlify  
+- Deployment: GitHub Pages
 
 ---
 
