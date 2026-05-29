@@ -10,7 +10,7 @@ import {
   FaJs, FaReact, FaPython, FaJava, FaDocker
 } from "react-icons/fa";
 import {
-  SiMysql, SiTypescript, SiCplusplus, SiC,
+  SiMysql, SiTypescript, SiCplusplus,
 } from "react-icons/si";
 import {
   DiDjango,DiLinux,DiPostgresql
@@ -26,11 +26,11 @@ const SKILLS = [
   { icon: <FaPython size={28} color="#306998" />, label: "Python" },
   { icon: <FaJava   size={28} />,                  label: "Java" },
   { icon: <SiCplusplus size={28} color="#00599C" />, label: "C++" },
-  { icon: <SiC      size={28} color="#00599C" />,  label: "C" },
   { icon: <SiMysql  size={28} color="#00599C" />,  label: "SQL" },
   {icon: <DiDjango  size={28} color="#00599C" />,  label: "Django" },
   {icon: <DiPostgresql  size={28} color="#00599C" />,  label: "Postgresql" },
   {icon: <DiLinux  size={28} color="#00599C" />,  label: "Linux" },
+  {icon: <FaDocker  size={28} color="#00599C" />,  label: "Docker" },
 ];
 
 const EXPERIENCES = [
