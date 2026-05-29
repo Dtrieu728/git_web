@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
 
-/* ── Hero wrapper ─────────────────────────────────── */
+/*  Hero wrapper  */
 .hero {
   position: relative;
   display: flex;
@@ -15,7 +15,7 @@
   padding: 0 32px;
 }
 
-/* ── Particle canvas ──────────────────────────────── */
+/* Particle canvas */
 .hero-canvas {
   position: absolute;
   inset: 0;
@@ -24,7 +24,7 @@
   pointer-events: none;
 }
 
-/* ── Content stack ────────────────────────────────── */
+/*  Content stack */
 .hero-content {
   position: relative;
   z-index: 2;

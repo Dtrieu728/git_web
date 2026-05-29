@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <button className="navbar-logo" onClick={() => handleScroll("Home")} aria-label="Go to top">
           <FaKiwiBird size={26} />
-          <span className="navbar-wordmark">DT</span>
+          <span className="navbar-wordmark">Kiwi</span>
         </button>
 
         {/* Desktop links */}

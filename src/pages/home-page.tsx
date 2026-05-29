@@ -28,7 +28,9 @@ const SKILLS = [
   { icon: <SiCplusplus size={28} color="#00599C" />, label: "C++" },
   { icon: <SiC      size={28} color="#00599C" />,  label: "C" },
   { icon: <SiMysql  size={28} color="#00599C" />,  label: "SQL" },
-  { icon: <SiMysql  size={28} color="#00599C" />,  label: "SQL" },
+  {icon: <DiDjango  size={28} color="#00599C" />,  label: "Django" },
+  {icon: <DiPostgresql  size={28} color="#00599C" />,  label: "Postgresql" },
+  {icon: <DiLinux  size={28} color="#00599C" />,  label: "Linux" },
 ];
 
 const EXPERIENCES = [
@@ -133,7 +135,7 @@ function HomePage() {
 
       <main id="Home" className="home-page">
 
-        {/* ── Profile ── */}
+        {/*  Profile  */}
         <Section eyebrow="Introduction" title="" className="profile-section">
           <div className="profile-card">
             <div className="profile-image-wrap">
@@ -150,7 +152,7 @@ function HomePage() {
           </div>
         </Section>
 
-        {/* ── Skills ── */}
+        {/*  Skills  */}
         <Section id="Skills-Tech" eyebrow="Toolbox" title="Skills &amp; Technologies">
           <div className="skills-grid">
             {SKILLS.map(({ icon, label }) => (
