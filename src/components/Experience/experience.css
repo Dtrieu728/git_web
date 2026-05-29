@@ -1,51 +1,178 @@
-/* Experience Item */
-.experience {
-  margin-bottom: 20px;
-  padding: 15px;
-  border-left: 4px solid #0066cc;
-  background-color: #f9f9f9;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap');
+
+
+:root {
+  --accent:       #1a56db;
+  --accent-light: #e8f0fe;
+  --text-primary: #0f1117;
+  --text-secondary: #444b5a;
+  --text-muted:   #8a93a6;
+  --border:       #e2e5eb;
+  --surface:      #ffffff;
+  --line-color:   #dde1e9;
 }
 
-:root.dark-mode .experience {
-  background-color: #333;
+:root.dark-mode {
+  --accent:       #5b8dee;
+  --accent-light: #1a2340;
+  --text-primary: #edf0f7;
+  --text-secondary: #b0b8cc;
+  --text-muted:   #606880;
+  --border:       #252a36;
+  --surface:      #161b27;
+  --line-color:   #252a36;
 }
 
-.experience h3 {
-  margin: 0 0 8px 0;
-  font-size: 1.2em;
-  font-weight: bold;
+/* Section wrapper */
+.experience-section {
+  padding: 80px 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 400;
   color: var(--text-primary);
-  transition: color 0.3s ease;
+  margin: 0 0 56px 0;
+  letter-spacing: -0.02em;
 }
 
-.experience h4 {
-  margin: 0 0 5px 0;
-  font-size: 1em;
-  font-weight: 600;
+/*  Timeline track  */
+.bio {
+  position: relative;
+  padding-left: 32px;
+}
+
+.bio::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--accent) 0%, var(--line-color) 100%);
+}
+
+/*  Single experience item */
+.exp-item {
+  position: relative;
+  margin-bottom: 48px;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.exp-item.exp-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dot on timeline */
+.exp-dot {
+  position: absolute;
+  left: -32px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  transition: background 0.25s ease, transform 0.25s ease;
+  z-index: 1;
+}
+
+.exp-item:hover .exp-dot {
+  background: var(--accent);
+  transform: scale(1.2);
+}
+
+/* Card body */
+.exp-body {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px 28px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.exp-item:hover .exp-body {
+  border-color: var(--accent);
+  box-shadow: 0 4px 24px rgba(26, 86, 219, 0.08);
+}
+
+/* Date badge */
+.exp-date {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-radius: 4px;
+  padding: 3px 8px;
+  margin-bottom: 12px;
+}
+
+/* Title */
+.exp-title {
+  margin: 0 0 4px 0;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+/* Org */
+.exp-org {
+  margin: 0 0 16px 0;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Responsibilities list */
+.exp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exp-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.88rem;
+  line-height: 1.65;
   color: var(--text-secondary);
-  transition: color 0.3s ease;
+  font-weight: 300;
+
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.experience p {
-  margin: 5px 0;
-  font-size: 0.9em;
-  color: var(--text-tertiary);
-  font-style: italic;
-  transition: color 0.3s ease;
+.exp-item.exp-visible .exp-list li {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.experience ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 10px 0 0 0;
+.exp-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.5;
 }
-
-.experience li {
-  margin-bottom: 8px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-  transition: color 0.3s ease;
-}
-  
