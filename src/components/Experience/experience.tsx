@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import "../Experience/experience.css";
 
 interface ExperienceProps {
   title: string;

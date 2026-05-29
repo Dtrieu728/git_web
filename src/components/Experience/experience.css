@@ -1,61 +1,9 @@
+/* experience.css — card styles only.
+   Tokens live in home_page.css.
+   Timeline track (.timeline::before) lives in home_page.css.
+   The .exp-dot left offset matches home_page.css .timeline padding-left (32px). */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap');
-
-
-:root {
-  --accent:       #1a56db;
-  --accent-light: #e8f0fe;
-  --text-primary: #0f1117;
-  --text-secondary: #444b5a;
-  --text-muted:   #8a93a6;
-  --border:       #e2e5eb;
-  --surface:      #ffffff;
-  --line-color:   #dde1e9;
-}
-
-:root.dark-mode {
-  --accent:       #5b8dee;
-  --accent-light: #1a2340;
-  --text-primary: #edf0f7;
-  --text-secondary: #b0b8cc;
-  --text-muted:   #606880;
-  --border:       #252a36;
-  --surface:      #161b27;
-  --line-color:   #252a36;
-}
-
-/* Section wrapper */
-.experience-section {
-  padding: 80px 0;
-  font-family: 'DM Sans', sans-serif;
-}
-
-.section-title {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 400;
-  color: var(--text-primary);
-  margin: 0 0 56px 0;
-  letter-spacing: -0.02em;
-}
-
-/*  Timeline track  */
-.bio {
-  position: relative;
-  padding-left: 32px;
-}
-
-.bio::before {
-  content: '';
-  position: absolute;
-  left: 7px;
-  top: 8px;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, var(--accent) 0%, var(--line-color) 100%);
-}
-
-/*  Single experience item */
+/* ── Single item ───────────────────────────────────── */
 .exp-item {
   position: relative;
   margin-bottom: 48px;
@@ -69,7 +17,7 @@
   transform: translateY(0);
 }
 
-/* Dot on timeline */
+/* Dot — sits on the track drawn by .timeline::before in home_page.css */
 .exp-dot {
   position: absolute;
   left: -32px;
@@ -127,7 +75,7 @@
   line-height: 1.3;
 }
 
-/* Org */
+/* Organisation */
 .exp-org {
   margin: 0 0 16px 0;
   font-size: 0.85rem;
@@ -154,7 +102,6 @@
   line-height: 1.65;
   color: var(--text-secondary);
   font-weight: 300;
-
   opacity: 0;
   transform: translateX(-8px);
   transition: opacity 0.4s ease, transform 0.4s ease;

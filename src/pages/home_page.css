@@ -1,182 +1,305 @@
-/* Variables - Light Mode (Default) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+
 :root {
-  --card-bg: #ffffff;
-  --card-border: #ccc;
-  --text-primary: #333;
-  --text-secondary: #555;
-  --text-tertiary: #777;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9f9f9;
-  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.2);
-  --border-radius: 10px;
-  --spacing-sm: 8px;
-  --spacing-md: 12px;
-  --spacing-lg: 20px;
-  --font-size-section: 30px;
-  --font-size-title: 25px;
+  /* Color */
+  --accent:           #1a56db;
+  --accent-light:     #e8f0fe;
+  --text-primary:     #0f1117;
+  --text-secondary:   #444b5a;
+  --text-muted:       #8a93a6;
+  --border:           #e2e5eb;
+  --surface:          #ffffff;
+  --bg:               #f7f8fb;
+
+  /* Type */
+  --font-sans:        'DM Sans', sans-serif;
+  --font-serif:       'DM Serif Display', serif;
+
+  /* Layout */
+  --max-w:            860px;
+  --section-gap:      120px;
+  --section-pad-top:  80px;
 }
 
-/* Dark Mode */
 :root.dark-mode {
-  --card-bg: #2a2a2a;
-  --card-border: #444;
-  --text-primary: #e0e0e0;
-  --text-secondary: #b0b0b0;
-  --text-tertiary: #888;
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #333;
-  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.3);
-  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.4);
-  --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.5);
+  --accent:           #5b8dee;
+  --accent-light:     #1a2340;
+  --text-primary:     #edf0f7;
+  --text-secondary:   #b0b8cc;
+  --text-muted:       #606880;
+  --border:           #252a36;
+  --surface:          #161b27;
+  --bg:               #0d111c;
 }
 
-/* Base Styles */
+/* 
+   BASE
+ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html  { scroll-behavior: smooth; }
+
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: var(--bg-primary);
+  font-family: var(--font-sans);
+  background-color: var(--bg);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Page Layout */
-.homePage {
+a { text-decoration: none; color: inherit; }
+
+/* 
+   PAGE SHELL
+ */
+.home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: var(--spacing-lg);
-  background-color: var(--bg-primary);
-  min-height: 100vh;
-  transition: background-color 0.3s ease;
+  padding: 0 24px;
+  /* push below fixed navbar */
+  padding-top: 60px;
 }
 
-/* Cards & Containers */
-.card,
-.additionalContainer,
-.borderContainer {
-  margin: var(--spacing-lg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-medium);
-  overflow: hidden;
-  background-color: var(--card-bg);
-  width: 99%;
-  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+/* 
+   SECTION BASE
+*/
+.page-section {
+  width: 100%;
+  max-width: var(--max-w);
+  padding-top: var(--section-gap);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
+.page-section--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section header */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 48px;
+}
+
+.section-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* 
+   PROFILE
+*/
+.profile-section .section-header { display: none; } /* No heading for profile */
 
 .profile-card {
-  width: 40%;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px 48px;
+  transition: border-color 0.25s;
 }
 
-/* Profile Section */
+.profile-card:hover {
+  border-color: var(--accent);
+}
+
+.profile-image-wrap {
+  flex-shrink: 0;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border);
+  transition: border-color 0.25s;
+}
+
+.profile-card:hover .profile-image-wrap {
+  border-color: var(--accent);
+}
+
 .profile-image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.container {
-  margin: var(--spacing-lg);
-  text-align: center;
-  font-size: 25px;
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* Section Styles */
-.bio {
-  padding: var(--spacing-md) 16px;
-  font-size: var(--font-size-title);
+.profile-name {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  font-weight: 400;
   color: var(--text-primary);
-  transition: color 0.3s ease;
+  letter-spacing: -0.02em;
 }
 
-.section-title {
-  text-align: center;
-  font-size: var(--font-size-section);
-  margin: var(--spacing-lg) 0;
-  color: var(--text-primary);
-  transition: color 0.3s ease;
+.profile-roles {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
 }
 
-.skills-section,
-.about-section,
-.experience-section,
-.projects-section {
-  width: 100%;
-  margin-top: var(--spacing-lg);
+.profile-resume {
+  margin-top: 4px;
 }
 
-.about-section,
-.experience-section,
-.projects-section {
-  margin-top: 200px;
-}
-
-/* Skills Container */
-.skills-container {
+/* 
+   SKILLS
+ */
+.skills-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin: var(--spacing-lg);
+  gap: 12px;
 }
 
-.skill {
+.skill-chip {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: var(--card-bg);
-  color: var(--text-primary);
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: 20px;
-  font-size: 16px;
-  font-weight: 500;
-  box-shadow: var(--shadow-light);
-  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 18px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: default;
 }
 
-.skill:hover {
-  box-shadow: var(--shadow-hover);
+.skill-chip:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 16px rgba(91, 141, 238, 0.1);
 }
 
-.skill svg {
+.skill-icon {
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
 }
 
-/* Button Styles */
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: var(--spacing-sm);
-  color: var(--text-primary);
-  background-color: var(--card-bg);
+.skill-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* 
+   ABOUT
+ */
+.about-body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 680px;
   text-align: center;
+}
+
+.about-body p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* 
+   EXPERIENCE  (timeline lives in experience.css,
+   this just handles the outer wrapper)
+*/
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--accent), var(--border));
+}
+
+/* 
+   RESUME BUTTON  (override defaults)
+ */
+.profile-resume button,
+.profile-resume a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid rgba(91, 141, 238, 0.25);
+  border-radius: 6px;
+  padding: 8px 16px;
   cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-}
-
-button:hover {
-  opacity: 0.7;
-}
-
-a {
+  width: auto;
+  transition: background 0.2s, border-color 0.2s;
   text-decoration: none;
-  font-size: 22px;
-  color: black;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-.image-container {
-  display: grid;
-  place-items: center;
+.profile-resume button:hover,
+.profile-resume a:hover {
+  background: rgba(91, 141, 238, 0.18);
+  border-color: var(--accent);
+  opacity: 1;
 }
 
-.image-container img {
-  width: 60%;
+/* 
+   FADE-IN UTILITY  (for any .fade-in elements)
+ */
+.fade-in { opacity: 0; transition: opacity 0.9s ease-in; }
+.fade-in.visible { opacity: 1; }
+
+/* 
+   RESPONSIVE
+*/
+@media (max-width: 640px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 24px;
+    gap: 24px;
+  }
+
+  .profile-info { align-items: center; }
+
+  .skills-grid { gap: 10px; }
+
+  :root {
+    --section-gap: 80px;
+  }
 }
