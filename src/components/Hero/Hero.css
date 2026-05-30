@@ -1,4 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+:root {
+  /* Color */
+  --accent:           #411adb;
+  --accent-light:     #e8f0fe;
+  --text-primary:     #0f1117;
+  --text-secondary:   #444b5a;
+  --text-muted:       #8a93a6;
+  --border:           #e2e5eb;
+  --surface:          #ffffff;
+  --bg:               #f7f8fb;
+
+  /* Type */
+  --font-sans:        'DM Sans', sans-serif;
+  --font-serif:       'DM Serif Display', serif;
+
+  /* Layout */
+  --max-w:            860px;
+  --section-gap:      120px;
+  --section-pad-top:  80px;
+}
+
+:root.dark-mode {
+  --accent:           #411adb;
+  --accent-light:     #1a2340;
+  --text-primary:     #edf0f7;
+  --text-secondary:   #b0b8cc;
+  --text-muted:       #606880;
+  --border:           #252a36;
+  --surface:          #161b27;
+  --bg:              #080c14;
+}
+
+
 
 /*  Hero wrapper  */
 .hero {
@@ -10,7 +43,7 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background: #080c14;
+  background: var(--bg);
   text-align: center;
   padding: 0 32px;
 }
@@ -44,7 +77,7 @@
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #5b8dee;
+  color: #4e7ddd;
   opacity: 0;
   animation: fadeUp 0.6s 0.2s forwards;
 }
@@ -63,7 +96,7 @@
   font-family: 'DM Serif Display', serif;
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 400;
-  color: #edf0f7;
+  color:var(--text-primary);
   letter-spacing: -0.03em;
   line-height: 1.05;
   opacity: 0;
@@ -88,7 +121,7 @@
   font-family: 'DM Sans', sans-serif;
   font-size: clamp(0.9rem, 2vw, 1.05rem);
   font-weight: 300;
-  color: #8a96b0;
+  color: var(--text-secondary);
   max-width: 440px;
   line-height: 1.7;
   letter-spacing: 0.01em;
@@ -111,7 +144,7 @@
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #5b8dee;
+  color: var(--accent);
   border: 1px solid rgba(91, 141, 238, 0.3);
   border-radius: 4px;
   padding: 5px 12px;

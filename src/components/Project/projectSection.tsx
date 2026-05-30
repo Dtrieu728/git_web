@@ -69,8 +69,8 @@ const PROJECTS: Project[] = [
     description:
       "Hackathon project employing NLP to detect gender-biased language in organizational content and suggest inclusive alternatives, fostering more equitable communication practices.",
     images: [],
-    links: [],
-    hasVideo: true,
+    links: [{label: "DevPost", url: "https://devpost.com/software/gender-inclusive-language-example"}],
+    hasVideo: false,
     techStack: ["Python", "NLP", "Text Analysis", "Machine Learning"],
   },
 ];

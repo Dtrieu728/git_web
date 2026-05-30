@@ -2,7 +2,7 @@
 
 :root {
   /* Color */
-  --accent:           #1a56db;
+  --accent:           #411adb;
   --accent-light:     #e8f0fe;
   --text-primary:     #0f1117;
   --text-secondary:   #444b5a;
@@ -22,14 +22,14 @@
 }
 
 :root.dark-mode {
-  --accent:           #5b8dee;
+  --accent:           #411adb;
   --accent-light:     #1a2340;
   --text-primary:     #edf0f7;
   --text-secondary:   #b0b8cc;
   --text-muted:       #606880;
   --border:           #252a36;
   --surface:          #161b27;
-  --bg:               #0d111c;
+  --bg:              #080c14;
 }
 
 /* 
@@ -222,15 +222,14 @@ a { text-decoration: none; color: inherit; }
 }
 
 .about-body p {
-  font-size: 0.95rem;
+  font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.8;
   color: var(--text-secondary);
 }
 
 /* 
-   EXPERIENCE  (timeline lives in experience.css,
-   this just handles the outer wrapper)
+   EXPERIENCE 
 */
 .timeline {
   position: relative;
