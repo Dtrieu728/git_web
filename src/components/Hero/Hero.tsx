@@ -78,9 +78,8 @@ const Hero = () => {
         </p>
         <div className="hero-tags">
           <span className="tag">Machine Learning</span>
-          <span className="tag">NLP</span>
           <span className="tag">Full Stack</span>
-          <span className="tag">GPU Computing</span>
+          <span className="tag">AI Research</span>
         </div>
       </div>
       <div className="scroll-hint">

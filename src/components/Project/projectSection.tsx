@@ -65,13 +65,23 @@ const PROJECTS: Project[] = [
   },
   {
     id: 6,
+    title: "Linux Self-Hosted Media Infrastructure",
+    description:
+      "Deployed a Docker Compose container orchestration system for 24/7 media streaming and LAN file distribution, with persistent storage and automated restarts mirroring production deployment practices",
+    images: [],
+    links: [],
+    hasVideo: false,
+    techStack: ["Linux", "Docker", "JellyFin", "Navidrome", "File Sharing"],
+  },
+   {
+    id: 7,
     title: "Gender-Inclusive Language Tool",
     description:
       "Hackathon project employing NLP to detect gender-biased language in organizational content and suggest inclusive alternatives, fostering more equitable communication practices.",
     images: [],
     links: [{label: "DevPost", url: "https://devpost.com/software/gender-inclusive-language-example"}],
     hasVideo: false,
-    techStack: ["Python", "NLP", "Text Analysis", "Machine Learning"],
+    techStack: ["C++", "WebDev", "Text Analysis"],
   },
 ];
 
