@@ -1,38 +1,190 @@
-/* Hero Section */
-.Hero {
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+:root {
+  /* Color */
+  --accent:           #411adb;
+  --accent-light:     #e8f0fe;
+  --text-primary:     #0f1117;
+  --text-secondary:   #444b5a;
+  --text-muted:       #8a93a6;
+  --border:           #e2e5eb;
+  --surface:          #ffffff;
+  --bg:               #f7f8fb;
+
+  /* Type */
+  --font-sans:        'DM Sans', sans-serif;
+  --font-serif:       'DM Serif Display', serif;
+
+  /* Layout */
+  --max-w:            860px;
+  --section-gap:      120px;
+  --section-pad-top:  80px;
+}
+
+:root.dark-mode {
+  --accent:           #411adb;
+  --accent-light:     #1a2340;
+  --text-primary:     #edf0f7;
+  --text-secondary:   #b0b8cc;
+  --text-muted:       #606880;
+  --border:           #252a36;
+  --surface:          #161b27;
+  --bg:              #080c14;
+}
+
+
+
+/*  Hero wrapper  */
+.hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, rgb(143, 13, 235), rgb(51, 139, 147));
   height: 100vh;
   width: 100vw;
-  padding: 0;
-  color: white;
+  overflow: hidden;
+  background: var(--bg);
   text-align: center;
+  padding: 0 32px;
 }
 
-:root.dark-mode .Hero {
-  background: linear-gradient(to right, rgb(100, 10, 150), rgb(30, 80, 90));
+/* Particle canvas */
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
-.Hero h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  margin: 0;
-  color: white;
+/*  Content stack */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.Hero h2 {
-  font-size: 2.5rem;
+/* Eyebrow label */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #4e7ddd;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.2s forwards;
+}
+.eyebrow::before,
+.eyebrow::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: #5b8dee;
+  opacity: 0.6;
+}
+
+/* Name */
+.hero-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 400;
-  margin: 10px 0;
-  color: white;
+  color:var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.4s forwards;
+}
+.hero-name em {
+  font-style: italic;
+  color: #5b8dee;
 }
 
-.Hero p {
-  font-size: 1.5rem;
-  margin: 20px 0;
-  color: white;
+/* Thin divider */
+.hero-divider {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #5b8dee, transparent);
+  opacity: 0;
+  animation: fadeUp 0.5s 0.6s forwards;
 }
-  
+
+/* Subtitle */
+.hero-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  font-weight: 300;
+  color: var(--text-secondary);
+  max-width: 440px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.7s forwards;
+}
+
+/* Tag pills */
+.hero-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.9s forwards;
+}
+.tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid rgba(91, 141, 238, 0.3);
+  border-radius: 4px;
+  padding: 5px 12px;
+  background: rgba(91, 141, 238, 0.06);
+}
+
+/* Scroll indicator */
+.scroll-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  animation: fadeUp 0.6s 1.2s forwards;
+}
+.scroll-hint span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3d4660;
+}
+.scroll-line {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, #5b8dee, transparent);
+  animation: scrollPulse 2s 1.4s ease-in-out infinite;
+}
+
+/* ── Animations ───────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.15); }
+}

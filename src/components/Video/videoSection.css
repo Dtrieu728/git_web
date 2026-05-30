@@ -13,9 +13,9 @@
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
-  color: #007bff;
+  color: #1a56db;
   text-decoration: none;
-  border: 2px solid #007bff;
+  border: 1px solid #007bff;
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-weight: 500;
