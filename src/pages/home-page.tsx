@@ -18,7 +18,7 @@ import {
 import { title } from "process";
 
 
-const headShot = require("../images/Funnydusty.jpg");
+const headShot = require("../images/headshot2.jpeg");
 
 const SKILLS = [
   { icon: <FaJs     size={28} color="#f7df1e" />, label: "JavaScript" },
@@ -68,6 +68,15 @@ const EXPERIENCES = [
     responsibilities: [
       "Supported the College of Engineering in planning and hosting engagement events for prospective students.",
       "Provided tours to prospective students and their families around campus.",
+    ],
+  },
+  {
+    title: "UX Visual Design Intern",
+    organization: "Village Volunteers",
+    date: "December 2024 – Frebruary 2025",
+    responsibilities: [
+      "Collaborated with clients to define user stories, ensuring user-centric and accessible design, conducted user research and usability testing to refine design elements",
+      " Implemented a new wireframe in Figma, improving user experience, leading to an increase in website traffic and a faster navigation experience",
     ],
   },
   {
