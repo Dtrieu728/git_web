@@ -15,6 +15,7 @@ import {
 import {
   DiDjango,DiLinux,DiPostgresql
 } from "react-icons/di";
+import { title } from "process";
 
 
 const headShot = require("../images/Funnydusty.jpg");
@@ -35,9 +36,15 @@ const SKILLS = [
 
 const EXPERIENCES = [
   {
+    title: "Software Engineer",
+    organization: "General Dynamics Mission Systems",
+    date: "August 2026 - Present",
+    responsibilities: []
+  },
+  {
     title: "Undergraduate Researcher",
     organization: "University of Delaware, THRAL Lab",
-    date: "August 2024 – Present",
+    date: "August 2025 – May 2026",
     responsibilities: [
       "Conduct research on early warning systems for CS1 courses using behavioral and performance data to identify students at risk of poor outcomes.",
       "Collaborate with a research team to apply machine learning techniques that improve prediction of student performance and inform instructional interventions.",
@@ -143,7 +150,7 @@ function HomePage() {
             </div>
             <div className="profile-info">
               <h3 className="profile-name">Dustine Trieu</h3>
-              <p className="profile-roles">ML Engineer · Full Stack Developer · AI Researcher</p>
+              <p className="profile-roles">ML Engineer · Full Stack Developer · Software Engineer</p>
               <SocialIcons />
               <div className="profile-resume">
                 <ResumeButton />
@@ -174,8 +181,8 @@ function HomePage() {
               applied AI research.
             </p>
             <p>
-              I'm currently conducting research in the THRAL Lab, where I develop machine learning
-              pipelines and fine-tune locally hosted LLMs to analyze behavioral data for early
+              I have assisted in research at the THRAL Lab, where I developed machine learning
+              pipelines and fine-tuned locally hosted LLMs to analyze behavioral data for early
               student-risk detection systems. My technical interests span natural language processing,
               predictive modeling, distributed systems, and GPU-accelerated computing.
             </p>
